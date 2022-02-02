@@ -42,16 +42,17 @@ int main()
     int x_coordinate;
     int y_coordinate;
     char moves[100];
-    bool valid_x = false;
-    bool valid_y = false;
-    bool valid_m = false;
-    bool valid_i = false;
     bool continuePlaying = true;
-    char userInput = 'a';
+    char userInput;
 
     // While user wants to continue playing
     while (continuePlaying)
     {
+        // Boolean declarations for the input loops
+        bool valid_x = false;
+        bool valid_y = false;
+        bool valid_m = false;
+        bool valid_i = false;
         // If the user enters a valid x coordinate set the robot's x position to the input and exit loop
         // Else keep asking for new input
         while (!valid_x)
@@ -91,11 +92,11 @@ int main()
                 for (int i = 0; i < move_length; i++)
                 {
                     if (moves[i] == 't' || moves[i] == 'T')
-                    {
+                    {                                          // If the character is t or T, turn the robot 
                         turn(&robot);
                     }
                     else if (moves[i] == 'm' || moves[i] == 'M')
-                    {
+                    {                                          // If the character is m or M, move the robot
                         move(&robot);
                     }
                 }
@@ -109,7 +110,7 @@ int main()
         while (!valid_i)
         {
             printf("Would you like to continue? Type 'y' for Yes and 'n' for No! \n");
-            scanf("%c", &userInput);
+            scanf(" %c", &userInput);
             if (userInput == 'n' || userInput == 'N')
             {
                 continuePlaying = false;
