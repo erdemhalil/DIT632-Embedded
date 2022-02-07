@@ -33,7 +33,7 @@ void printfile(void) // Prints out all persons in the file
     FILE *file;    // Create a file pointer
     // Open the file to read from it
     file = fopen("file.bin", "rb");
-    //Check if the file exists
+    // Check if the file exists
     if (file != NULL)
     {
         // Goto the end of the file
@@ -80,7 +80,7 @@ void search_by_firstname(char *name) // Prints out the person if in list
     FILE *file;    // Create a file pointer
     // Open the file to read from it
     file = fopen("file.bin", "rb");
-    //Check if the file exists
+    // Check if the file exists
     if (file != NULL)
     {
         // Goto the end of the file
@@ -123,6 +123,8 @@ void search_by_firstname(char *name) // Prints out the person if in list
     {
         printf("The file doesn't exist.\n");
     }
+    // Close the file
+    fclose(file);
 }
 
 void search_by_lastname(char *name) // Prints out the person if in list
@@ -131,7 +133,7 @@ void search_by_lastname(char *name) // Prints out the person if in list
     FILE *file;    // Create a file pointer
     // Open the file to read from it
     file = fopen("file.bin", "rb");
-    //Check if the file exists
+    // Check if the file exists
     if (file != NULL)
     {
         // Goto the end of the file
@@ -174,6 +176,8 @@ void search_by_lastname(char *name) // Prints out the person if in list
     {
         printf("The file doesn't exist.\n");
     }
+    // Close the file
+    fclose(file);
 }
 
 void append_file(PERSON *inrecord) // appends a new person to the file
