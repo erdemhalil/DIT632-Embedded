@@ -58,11 +58,11 @@ int main()
         while (!valid_x)
         {
             printf("Select starting x-axis position for the robot (0-99): \n");
-            scanf("%d", &x_coordinate);
-            if (valid_coordinate(x_coordinate))
+            scanf("%d", &x_coordinate); // Assign the input to x_coordinate
+            if (valid_coordinate(x_coordinate)) // check if coordinate is valid
             {
-                robot.xpos = x_coordinate;
-                valid_x = true;
+                robot.xpos = x_coordinate; // update robot's xpos to input
+                valid_x = true; // exit loop
             }
         }
 
@@ -71,11 +71,11 @@ int main()
         while (!valid_y)
         {
             printf("Select starting y-axis position for the robot (0-99): \n");
-            scanf("%d", &y_coordinate);
-            if (valid_coordinate(y_coordinate))
+            scanf("%d", &y_coordinate); // Assign the input to y_coordinate
+            if (valid_coordinate(y_coordinate)) // check if coordinate is valid
             {
-                robot.ypos = y_coordinate;
-                valid_y = true;
+                robot.ypos = y_coordinate;  // update robot's ypos to input
+                valid_y = true; // exit loop
             }
         }
 
@@ -84,8 +84,8 @@ int main()
         while (!valid_m)
         {
             printf("\n Enter robot's movement. Type 'm' to make it move 1 position forward and 't' to make it turn 90 degrees. Example: mmmtmttttm \n");
-            scanf("%s", &moves);
-            if (valid_move(moves))
+            scanf("%s", &moves); // Assign the input to moves
+            if (valid_move(moves)) // Check if the moves are valid
             {
                 // Go through the validated input and call turn or move function according to the character
                 int move_length = strlen(moves);
@@ -100,8 +100,8 @@ int main()
                         move(&robot);
                     }
                 }
-                printf("The robot is facing %c at x:%d, y:%d. \n", robot.dir, robot.xpos, robot.ypos);
-                valid_m = true;
+                printf("The robot is facing %c at x:%d, y:%d. \n", robot.dir, robot.xpos, robot.ypos); // print robot's final position
+                valid_m = true; // exit loop
             }
         }
 
@@ -110,17 +110,17 @@ int main()
         while (!valid_i)
         {
             printf("Would you like to continue? Type 'y' for Yes and 'n' for No! \n");
-            scanf(" %c", &userInput);
-            if (userInput == 'n' || userInput == 'N')
+            scanf(" %c", &userInput); // Assign the input to userInput
+            if (userInput == 'n' || userInput == 'N') // Check if the input is no
             {
-                continuePlaying = false;
-                valid_i = true;
+                continuePlaying = false; // set bool to false to exit the program
+                valid_i = true; // set bool to true to exit the loop
             }
-            else if (userInput = 'y' || userInput == 'Y')
+            else if (userInput = 'y' || userInput == 'Y') // Check if the input is yes
             {
-                valid_i = true;
+                valid_i = true; // set bool to true to exit the loop
             }
-            else
+            else // IF the input is neither yes nor no, print out an error message
             {
                 printf("Invalid input! \n");
             }
