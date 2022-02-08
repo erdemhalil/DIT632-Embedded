@@ -1,7 +1,7 @@
 // (C) Taofik Arnouk, Erdem Halil, Vlad Liteanu, group: 8 (2022)
 // Work package 2
 // Exercise 1
-// Submission code:
+// Submission code: enN8B0Bc
 
 #include <stdlib.h>
 #include <stdio.h>

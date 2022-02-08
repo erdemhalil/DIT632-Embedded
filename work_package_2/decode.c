@@ -1,7 +1,7 @@
 // (C) Taofik Arnouk, Erdem Halil, Vlad Liteanu, group: 8 (2022)
 // Work package 2
 // Exercise 4
-// Submission code:
+// Submission code: enN8B0Bc
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -15,7 +15,7 @@ int valid_hex(char *hex)
     {
         char c = hex[i]; // Get the character
 
-        if((c < '0' || c > '9') && (c < 'A' || c > 'F') && (c < 'a' || c > 'f')) // Check whether it's not 0-9, a-f or A-F, if so return 0
+        if(!((c >= '0' && c <= '9') || (c >= 'A' && c <= 'F') || (c >= 'a' && c <= 'f'))) // Check whether it's not 0-9, a-f or A-F, if so return 0
         {
             return 0; 
         }
@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
         int arg_len = strlen(argv[1]); // Get the length of the argument
         if (arg_len > 0 && arg_len < 3) // Check if the length is 1 or 2
         {
-            if (valid_hex) // if the provided argument is a valid hexadecimal
+            if (valid_hex(argv[1])) // if the provided argument is a valid hexadecimal
             {
                 hex = (unsigned int)strtol(argv[1], NULL, 16); // Convert hexadecimal to long int and then cast it to unsigned int
 
