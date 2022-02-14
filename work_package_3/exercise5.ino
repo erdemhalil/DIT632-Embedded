@@ -1,3 +1,8 @@
+// (C) Taofik Arnouk, Erdem Halil, Vlad Liteanu, group: 8 (2022)
+// Work package 3
+// Exercise 5
+// Submission code: 
+
 // header file for Keypad library
 #include <Keypad.h>
 
