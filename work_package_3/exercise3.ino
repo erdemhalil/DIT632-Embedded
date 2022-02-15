@@ -1,7 +1,7 @@
 // (C) Taofik Arnouk, Erdem Halil, Vlad Liteanu, group: 8 (2022)
 // Work package 3
 // Exercise 3
-// Submission code:
+// Submission code: Q7rQleQt
 
 // Initiate the delay variable
 int periodicity = 500;

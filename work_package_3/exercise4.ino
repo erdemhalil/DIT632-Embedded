@@ -1,7 +1,7 @@
 // (C) Taofik Arnouk, Erdem Halil, Vlad Liteanu, group: 8 (2022)
 // Work package 3
 // Exercise 4
-// Submission code: 
+// Submission code: Q7rQleQt
 
 const int maxColspins[4] = {2, 3, 4, 5}; //pin numbers on the column
 const int maxRowspins[4] = {8, 9, 10, 11}; //pin numbers on the row
