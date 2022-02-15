@@ -16,18 +16,21 @@ void loop()
 {
   // Get the information from pin A0
   double temp = analogRead(A0);
+  //Convert the voltage to the temperature
+  temp = temp / 1024;
+  temp = ((temp * 5) - 0.5) * 100;
+
+  /*
+  // The code bellow should be running correctry but the output seems to be wrong
+  // I think there might be some limitation with tinkercad
+  // If i do the math on my phone it works perfecly but it gives the wrong value on tinkercad
+
   // Convert the readout to voltage
   temp = temp * (5000 / 1024);
   // Convert the voltage to temperature
   temp = (temp - 500) / 10;
-
-  /*
-  // The code above should be running correctry but the output seems to be wrong
-  // I think there might be some limitation with tinkercad
-  // The code bellow gives a more accurate temperature reading
-    temp = temp / 1024;
-    temp = ((temp * 5) - 0.5) * 100;
   */
+
   // Print the temperature to the serial output
   Serial.print("Current Temperature: ");
   Serial.println(temp);
