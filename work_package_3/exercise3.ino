@@ -31,6 +31,10 @@ void loop()
   temp = (temp - 500) / 10;
   */
 
+  // Print the voltage to the serial output
+  Serial.print("Voltage: ");
+  Serial.println(analogRead(A0) * (5000 / 1024));
+
   // Print the temperature to the serial output
   Serial.print("Current Temperature: ");
   Serial.println(temp);
