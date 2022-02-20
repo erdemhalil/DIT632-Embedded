@@ -1,3 +1,8 @@
+// (C) Taofik Arnouk, Erdem Halil, Vlad Liteanu, group: 8 (2022)
+// Work package 4
+// Exercise 1
+// Submission code: 
+
 // Initialize the temperatures when the leds power
 int temp1 = 0;
 int temp2 = 20;
@@ -11,9 +16,9 @@ void setup()
     TCCR1B = 0;
     // Set CS12 to 256 so that it counts one every time 256 pulses pass in the internal timer
     TCCR1B |= B00000100;
-    // Enable compare match A
+    // Enable compare match with OCR1A
     TIMSK1 |= B00000010;
-    // Create an intrerump every 300ms ( = 62.5ns * 256 * 15625)
+    // Create an intrerump every 300ms ( = 62.5ns * 256 * 18750)
     OCR1A = 18750;
     // Start the serial port
     Serial.begin(9600);
@@ -25,9 +30,10 @@ void setup()
     pinMode(9, OUTPUT);
 }
 
-void loop(){
-}
+void loop() {}
 
+// Function to trigger an action 
+// ISR will trigger every 300ms because we use TIMER1_COMPA_vect
 ISR(TIMER1_COMPA_vect)
 {
     // Reset the timer
