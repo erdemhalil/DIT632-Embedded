@@ -1,7 +1,7 @@
 // (C) Taofik Arnouk, Erdem Halil, Vlad Liteanu, group: 8 (2022)
 // Work package 4
 // Exercise 1
-// Submission code: 
+// Submission code: tuesday49
 
 // Initialize the temperatures when the leds power
 int temp1 = 0;

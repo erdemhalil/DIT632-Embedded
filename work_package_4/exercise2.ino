@@ -1,7 +1,7 @@
 // (C) Taofik Arnouk, Erdem Halil, Vlad Liteanu, group: 8 (2022)
 // Work package 4
 // Exercise 2
-// Submission code: 
+// Submission code: tuesday49
 
 int seconds = 0; // Initiate the seconds variable
 int n = 0;

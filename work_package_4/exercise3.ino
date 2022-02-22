@@ -1,7 +1,7 @@
 // (C) Taofik Arnouk, Erdem Halil, Vlad Liteanu, group: 8 (2022)
 // Work package 4
 // Exercise 3
-// Submission code: 
+// Submission code: tuesday49
 
 #include <Adafruit_NeoPixel.h>
 
