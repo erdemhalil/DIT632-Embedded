@@ -1,9 +1,9 @@
 // (C) Taofik Arnouk, Erdem Halil, Vlad Liteanu, group: 8 (2022)
 // Work package 5
 // Exercise 3
-// Submission code: 
+// Submission code: tuesday91
 
-// Initiate the delay variable
+// Initiate the delay variable (ms)
 int periodicity = 500;
 
 void setup()
