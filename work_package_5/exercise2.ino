@@ -7,8 +7,7 @@
 int temp1 = 0;
 int temp2 = 10;
 int temp3 = 20;
-int temp4 = 26;
-int delay = 18750; //300ms between intrerupts ( = 62.5ns * 256 * 18750)
+int temp4 = 30;
 
 void setup()
 {
@@ -20,7 +19,7 @@ void setup()
     // Enable compare match A
     TIMSK1 |= B00000010;
     // Create an intrerump every 300ms 
-    OCR1A = delay;
+    OCR1A = 18750;
     // Start the serial port
     Serial.begin(9600);
     // Set the led pins to output

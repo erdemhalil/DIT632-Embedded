@@ -3,7 +3,7 @@
 // Exercise 3
 // Submission code: tuesday91
 
-// Initiate the delay variable
+// Initiate the delay variable (ms)
 int periodicity = 500;
 
 void setup()
