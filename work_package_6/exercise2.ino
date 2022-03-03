@@ -1,3 +1,8 @@
+// (C) Taofik Arnouk, Erdem Halil, Vlad Liteanu, group: 8 (2022)
+// Work package 6
+// Exercise 2
+// Submission code: Thursday92
+
 // Initialize the time variables for the speaker 
 // The lower the value the higher the frequency of the speaker 
 unsigned long speakerInterval1 = 9;
